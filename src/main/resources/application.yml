@@ -1,0 +1,39 @@
+
+spring:
+  profiles:
+    active: dev
+#只有此处激活的生效，哪怕是在此文档区写配置文件如果下面有新的也会被覆盖
+server:
+  servlet:
+    context-path: /api/
+  address: 127.0.0.1
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+#person:
+#  lastName: zhangsan
+#  age: 18
+#  boss: false
+#  brith: 2020/11/14
+#  maps: {k1: v1,k2: v2}
+#  lists:
+#    - lisi
+#    - zhaoliu
+#    - wangwu
+#    - laogou
+#  dog:
+#    name: 小狗
+#    age: 2
+---
+server:
+  port: 8099
+spring:
+  profiles: prod
+
+---
+server:
+  port: 8600
+spring:
+  profiles: test
